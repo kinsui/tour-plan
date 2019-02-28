@@ -28,3 +28,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 测试图片展示
+--- --- 
+1. 使用本地相对路径./readme_img/test.png  
+![测试图片的alt文字，海大](./readme_img/test.jpg)
+

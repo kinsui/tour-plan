@@ -1,0 +1,44 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, img, input, select, div {
+    margin: 0;
+    padding: 0
+}
+body {
+    width: 100%;
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: .12rem;
+    background: #FFFFFF;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    border: none;
+}
+a:active {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+button, input {
+    -webkit-appearance: none;
+}
+ol, ul, li {
+    list-style: none;
+}
+img {
+    border: none;
+    display: block;
+}
+b {
+    font-weight: normal;
+}
+i {
+    font-style: normal;
+}
+input, button, textarea, select {
+    border: none;
+    outline: none;
+}
+button, input[type="button"] ,input[type="submit"]{
+    -webkit-user-select: none; /* Chrome all / Safari all */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+}

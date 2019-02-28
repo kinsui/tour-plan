@@ -1,28 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view/>
+    <p>heiheihei</p>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+<style lang="scss">
+  @import "~testAlias/test.scss";
+  #app {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-image: url(~img/favicon_600.png);
   }
-}
-</script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
