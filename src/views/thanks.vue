@@ -25,6 +25,8 @@ export default {
   methods: {
     close() {
       window.close();
+      // 微信浏览器关闭页面
+      WeixinJSBridge.call('closeWindow');
     },
   },
 };
