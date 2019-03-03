@@ -9,6 +9,6 @@ module.exports = {
     config.resolve.alias
       .set('img', resolve('src/assets/img'))
       .set('font', resolve('src/assets/font'))
-      .set('testAlias', resolve('src/views/testAlias'));
+      .set('css', resolve('src/assets/css'));
   },
 };
