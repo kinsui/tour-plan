@@ -11,23 +11,16 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+###关于本地SSL
+**开发环境开启了https**，也就是给localhost配置了ssl，因为是本地自签发证书所以需要自行配置；参见 [mkcert](https://github.com/FiloSottile/mkcert)；  
+webpack开启https配置文件在vue.congfig.js中有写  
+**注意：**配置的SSL证书必须匹配localhost和IP，因为webpack的一个sock通信使用的是https://192.168.xxx.xxx这样的链接，只匹配localhost会导致控制台疯狂报错。。。。  
+![SSL证书](./readme_img/ssl.png)  
 ```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
+# 对应的代码
+ .\mkcert-v1.3.0-windows-amd64.exe -ecdsa localhost 192.168.31.100
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### 测试图片展示
 --- --- 
