@@ -25,13 +25,10 @@ export default {
   methods: {
     close() {
       // 微信内直接关闭页面
-      if (window.WeixinJSBridge) window.WeixinJSBridge.call('closeWindow');
+      if (window.WeixinJSBridge) return window.WeixinJSBridge.call('closeWindow');
       // 因为在浏览器中window.close()会被禁止所以只能让用户回到 “来时的路”，当“来时的路”为空的时候就回到当前标签历史记录的第一条~
-      if (document.referrer === '') {
-        window.history.go(0 - window.history.length + 1);
-      } else {
-        window.location.href = document.referrer;
-      }
+      if (document.referrer === '') return window.history.go(0 - window.history.length + 1);
+      return window.location.assign(document.referrer);
     },
   },
 };
