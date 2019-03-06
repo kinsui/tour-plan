@@ -11,10 +11,10 @@ npm install
 npm run serve
 ```
 
-###关于本地SSL
+### 关于本地SSL  
 **开发环境开启了https**，也就是给localhost配置了ssl，因为是本地自签发证书所以需要自行配置；参见 [mkcert](https://github.com/FiloSottile/mkcert)；  
 webpack开启https配置文件在vue.congfig.js中有写  
-**注意：**配置的SSL证书必须匹配localhost和IP，因为webpack的一个sock通信使用的是https://192.168.xxx.xxx这样的链接，只匹配localhost会导致控制台疯狂报错。。。。  
+**注意**：配置的SSL证书必须匹配localhost和IP，因为webpack的一个sock通信使用的是https://192.168.xxx.xxx这样的链接，只匹配localhost会导致控制台疯狂报错。。。。  
 ![SSL证书](./readme_img/ssl.png)  
 ```
 # 对应的代码
