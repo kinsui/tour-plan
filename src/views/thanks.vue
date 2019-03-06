@@ -24,9 +24,14 @@ export default {
   },
   methods: {
     close() {
-      window.close();
-      // 微信浏览器关闭页面
-      WeixinJSBridge.call('closeWindow');
+      // 微信内直接关闭页面
+      if (window.WeixinJSBridge) window.WeixinJSBridge.call('closeWindow');
+      // 因为在浏览器中window.close()会被禁止所以只能让用户回到 “来时的路”，当“来时的路”为空的时候就回到当前标签历史记录的第一条~
+      if (document.referrer === '') {
+        window.location.href = document.referrer;
+      } else {
+        window.history.go(0 - window.history.length + 1);
+      }
     },
   },
 };
@@ -46,14 +51,14 @@ export default {
     background-position: 0 0.1rem;
     background-repeat: no-repeat;
 
-    h2{
-      width:100%;
+    h2 {
+      width: 100%;
       height: 0.8rem;
       line-height: 0.81rem;
       font-weight: bold;
       font-size: 0.43rem;
       text-align: center;
-      color:#CE9091;
+      color: #CE9091;
     }
 
     .typeTextWrap {

@@ -82,7 +82,6 @@ export default {
     },
   },
   beforeRouteEnter(to, from, next) {
-    console.log(to.params.goOrBack);
     to.params.goOrBack === false
       ? next((vm) => {
         vm.goOrBack = false;
