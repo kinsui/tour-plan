@@ -13,20 +13,6 @@
 <script>
 export default {
   name: 'index',
-  data() {
-    return {};
-  },
-  methods: {},
-  beforeRouteEnter(to, from, next) {
-    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-      next();
-    } else {
-      next({
-        name: 'pc',
-        replace: true,
-      });
-    }
-  },
 };
 </script>
 
