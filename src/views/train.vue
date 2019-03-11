@@ -122,7 +122,7 @@ export default {
     background-size: contain;
     background-position: 0 1.8rem;
     background-repeat: no-repeat;
-
+overflow-x: hidden;
     .train {
       min-width: 100%;
       height: 1rem;

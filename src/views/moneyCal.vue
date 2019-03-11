@@ -23,7 +23,7 @@ export default {
   #money {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: calc(100% - 0.2rem);
     height: 0.8rem;
     padding: 0.1rem 0.3rem;
     z-index: 99;
