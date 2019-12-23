@@ -20,4 +20,11 @@ module.exports = {
     },
     port: 443,
   },
+  css: {
+    loaderOptions: {
+      sass: {
+        implementation: require('sass')
+      },
+    },
+  }
 };
